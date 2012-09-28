@@ -1,0 +1,67 @@
+/*
+CSS
+*/
+
+body {
+    background:transparent url(../img/header.jpg) no-repeat top center;
+    background-color: black;
+    margin:auto;
+}
+
+container, header, nav, footer {
+    margin:auto;
+    display:block;
+}
+
+container {
+    width:900px;
+    border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 1px 3px rgb(187, 187, 187);
+    background-color:white;
+}
+
+header {
+	
+	width:900px;
+	height:250px;
+	color:white;
+}
+
+header h1 {
+	padding-top:150px;
+	font-family: 'Ubuntu', sans-serif, Arial;
+	font-size: 65px;
+	font-weight: bold;	
+}
+
+header h4 {
+	color:#aaaaa5;
+	font-family: Arial, sans-serif;
+}
+
+#inline {
+	float:left;
+}
+
+#content {
+	padding: 15px 15px 15px 15px;
+}
+
+footer {
+	border-style:solid;
+	border-color: #aaaaa5 ;
+	border-width: 1px;
+	border-radius: 0px 0px 15px 15px;
+	padding: 10px 15px 10px 15px;
+}
+
+#content h2 {
+	font-size: 38px;
+	font-family: Arial;
+}
+
+#content p {
+	font-size: 20px;
+	font-family: Arial;
+}
+
