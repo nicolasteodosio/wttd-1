@@ -5,6 +5,7 @@ lib
 local
 man
 share
+.idea
 Scripts
 .Python
 *.pyc
