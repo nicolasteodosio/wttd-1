@@ -1,0 +1,29 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <title>EventeX - Fazendo o seu evento</title>
+    <link type="text/css" href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <header>
+        <h1><a class="title" href="/">EventeX</a></h1>
+    </header>
+
+    <container>
+        <nav>
+
+        </nav>
+
+        <div id="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+        <footer>
+            <p>&copy; 2012. <a rel="license" href="http://eventex.herike.com">EventeX</a>, some rights reserved. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" /></a><a href="http://www.djangoproject.com/" id="django"><img src="http://media.djangoproject.com/img/badges/djangosite80x15.gif" border="0" alt="A Django site." title="A Django site." /></a></p>
+            </div>
+        </footer>
+    </container>
+</body>
+</html>

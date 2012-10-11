@@ -20,15 +20,41 @@ container {
     background-color:white;
 }
 
+a {
+	color:#258fc1;
+	text-decoration:none;
+}
+
+a:visited {
+	color:#258fc1;
+}
+
+a:hover {
+	color:#d60000;
+}
+
+.title {
+	color: #FFF;
+	text-decoration:none;
+}
+
+.title:visited {
+	color: inherit;
+}
+
+.title:hover {
+	color:#d60000;
+}
+
 header {
 	
 	width:900px;
-	height:250px;
+	height:150px;
 	color:white;
 }
 
 header h1 {
-	padding-top:150px;
+	padding-top:50px;
 	font-family: 'Ubuntu', sans-serif, Arial;
 	font-size: 65px;
 	font-weight: bold;	
@@ -57,7 +83,7 @@ footer {
 
 #content h2 {
 	font-size: 38px;
-	font-family: Arial;
+	font-family: sans-serif;
 }
 
 #content p {
@@ -65,3 +91,29 @@ footer {
 	font-family: Arial;
 }
 
+input[type="text"],
+input [type="email"],
+input[type="password"] {
+	border: 1px solid #ccc;
+	outline: 0;
+	padding: 6px 15px;
+	box-shadow: inset 0 2px 2px #eee;
+	-moz-box-shadow: inset 0 2px 2px #eee;
+	-webkit-box-shadow: inset 0 2px 2px #eee;
+
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	--webkit-border-radius: 4px;
+}
+
+#form_inscricao label,
+#form_inscricao input { 
+	display: block; 
+}
+
+#form_inscricao label {
+	padding: 5px 0 5px 4px ;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+}

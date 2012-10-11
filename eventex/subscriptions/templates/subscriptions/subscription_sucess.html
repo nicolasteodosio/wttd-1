@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Parabéns {{ subscription.name }}!</h2>
+    <br>
+    <p>Sua inscrição foi realizada com sucesso em {{ subscription.created_at|date:"d/m/y" }}</p>
+    <p>Em breve entraremos em contato pelo
+    {% if subscription.phone %}
+        telefone {{ subscription.phone }}
+    {% else %}
+        email {{ subscription.email }}
+    {% endif %}
+    </p>
+{% endblock content %}

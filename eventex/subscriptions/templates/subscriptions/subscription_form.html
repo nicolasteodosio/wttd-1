@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Formulário de inscrição</h2>
+    <form id="form_inscricao" action="." method="POST">
+    	{% csrf_token %}
+        <label for="name">Nome</label>
+        {{form.name.errors}}
+        {{form.name}}
+
+        <label for="cpf">CPF</label>
+        {{form.cpf.errors}}
+        {{form.cpf}}
+        <label for="email">Email</label>
+        {{form.email.errors}}
+        {{form.email}}
+        <label for="phone">Telefone</label>
+        {{form.phone.errors}}
+        {{form.phone}}
+        <br>
+    	<input type="submit" value="Enviar" class="button" />
+    </form>
+{% endblock content %}
