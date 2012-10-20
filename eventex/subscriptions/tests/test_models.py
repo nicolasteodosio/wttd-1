@@ -25,7 +25,7 @@ class SubscriptionTest(TestCase):
         self.assertIsInstance(self.obj.created_at, datetime)
 
     def test_unicode(self):
-        self.assertEqual(u'Victor Hugo Novais', unicode(self.obj.name))
+        self.assertEqual(u'Victor Hugo Novais', unicode(self.obj))
 
 
 class SubscriptionPostTest(TestCase):

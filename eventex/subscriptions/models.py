@@ -14,3 +14,6 @@ class Subscription(models.Model):
         ordering = ['created_at']
         verbose_name = _('Inscrição')
         verbose_name_plural = _('Inscrições')
+
+    def __unicode__(self):
+        return self.name
