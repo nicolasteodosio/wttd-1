@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 from django.test import TestCase
+from django.core.urlresolvers import reverse
 from eventex.subscriptions.models import Subscription
 
 
@@ -8,7 +9,7 @@ class SucessTest(TestCase):
         s = Subscription.objects.create(name='Victor Hugo', cpf='12345678910',
                                         email='victor@gmail.com',
                                         phone='21-9999-9999')
-        self.resp = self.client.get('/inscricao/%d/' % s.pk)
+        self.resp = self.client.get(reverse('subscriptions:sucess', args=[s.pk]))
 
     def test_get(self):
         self.assertEqual(200, self.resp.status_code)
@@ -25,7 +26,7 @@ class SucessTest(TestCase):
         'Make sure that the page was rendered'
         self.assertContains(self.resp, 'Victor Hugo')
 
-class SucessNotFoundTest(TestCase):
+class SucessViewNotFoundTest(TestCase):
     def test_not_found(self):
-        response = self.client.get('/inscricao/0/')
+        response = self.client.get(reverse('subscriptions:sucess', args=[0]))
         self.assertEqual(404, response.status_code)
