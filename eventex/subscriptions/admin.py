@@ -6,7 +6,7 @@ from eventex.subscriptions.models import Subscription
 
 
 class SubscriptionAdmin(admin.ModelAdmin):
-    list_display = ('name','cpf','email','phone','created_at','subscribed_today',)
+    list_display = ('name','cpf','email','phone','created_at','subscribed_today','paid',)
     date_hierarchy = ('created_at',)
     search_fields = ('name','email','phone',)
     list_filter = ('created_at',)

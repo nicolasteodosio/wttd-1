@@ -27,10 +27,13 @@ class SubscriptionTest(TestCase):
     def test_unicode(self):
         self.assertEqual(u'Victor Hugo Novais', unicode(self.obj))
 
+    def test_paid_default_value_is_false(self):
+        'By default, paid must be false'
+        self.assertEqual(False,self.obj.paid)
 
 class SubscriptionPostTest(TestCase):
     def setUp(self):
-        #Setting up a valid post for tests
+        'Setting up a valid post for tests'
         data = dict(name='Victor Hugo Novais', cpf='12345678910',
                     email='victorh.novaisr@gmail.com', phone='21-9999-9999')
         self.resp = self.client.post('/inscricao/', data)
@@ -47,7 +50,7 @@ class SubscriptionPostTest(TestCase):
 
 class SubscriptionUniqueTest(TestCase):
     def setUp(self):
-        #Creating an Instance of Subscription()
+        'Creating an Instance of Subscription()'
         Subscription.objects.create(cpf='12345678910',
                                     email='victorh.novaisr@gmail.com')
 
