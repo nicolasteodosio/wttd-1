@@ -10,6 +10,15 @@ def CPFValidator(value):
     if not value.isdigit():
         raise ValidationError(_(u'CPF deve conter apenas números'))
 
+def clean(self):
+    super(SubscriptionForm, self).clean()
+
+    if not self.cleaned_data.get('email') and \
+       not self.cleaned_data.get('cpf'):
+        raise ValidationError(_(u'Informe seu e-mail ou telefone'))
+
+    return self.cleaned_data
+
 
 class SubscriptionForm(forms.ModelForm):
     class Meta:

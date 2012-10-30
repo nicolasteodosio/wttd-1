@@ -22,6 +22,11 @@ class SubscriptionFormTest(TestCase):
         form = self.make_validated_form(email='')
         self.assertFalse(form.errors)
 
+    def test_must_inform_email_or_cpf(self):
+        'Email and phone are optional, but one must be informed'
+        form = self.make_validated_form(email='', phone='')
+        self.assertItemsEqual(['__all__'], form.errors)
+
     def make_validated_form(self, **kwargs):
         data = dict(name='Victor Hugo Novais', email='victorh.novaisr@gmail.com',
                     cpf='12345678910', phone='21-9999-9999')
