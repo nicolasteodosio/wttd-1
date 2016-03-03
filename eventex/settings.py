@@ -1,8 +1,10 @@
 # Django settings for eventex project.
+import os
 from unipath import Path
 import dj_database_url
 
 PROJECT_DIR = Path(__file__).parent
+ROOT_DIR = os.path.dirname(PROJECT_DIR)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
